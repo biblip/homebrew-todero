@@ -1,14 +1,17 @@
 class ToderoJvmEngine < Formula
   desc "Todero JVM reference engine"
   homepage "https://github.com/biblip/todero"
-  url "https://brew.social100.com/brew/todero-jvm-engine-0.1.65.tar.gz"
-  sha256 "40213034581b55f23b463620677f31a04df4622c1d7d63cefd904c3fd46325c9"
+  url "https://brew.social100.com/brew/todero-jvm-engine-0.1.67.tar.gz"
+  sha256 "bf1bb34278f9f02f033bc0b801a180a871daa048e97ad0cd7d25ceeaceb23a9e"
   license "Apache-2.0"
   depends_on "openjdk@17"
 
   def install
     libexec.install Dir["libexec/*"]
     bin.install Dir["bin/*"]
+    if Dir.exist?("usr/share")
+      share.install Dir["usr/share/*"]
+    end
   end
 
   def post_install

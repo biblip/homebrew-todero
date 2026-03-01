@@ -1,10 +1,10 @@
-class ToderoJvmRunner < Formula
-  desc "Todero component runner"
+class ToderoNative < Formula
+  desc "Todero native protocol runtime library"
   homepage "https://github.com/biblip/todero"
-  url "https://brew.social100.com/brew/todero-jvm-runner-0.1.67.tar.gz"
-  sha256 "c3d80bb966c7b835f8ad65441e4c2cef6c1d25e03d341f3875cedee0693f49e3"
+  url "https://brew.social100.com/brew/todero-native-0.1.67.tar.gz"
+  sha256 "f5c43ab15429eb8f833b0c596f1c0b7d93d94fe6bafaaa57f75b18e0f1c5205b"
   license "Apache-2.0"
-  depends_on "openjdk@17"
+
 
   def install
     libexec.install Dir["libexec/*"]
@@ -23,6 +23,6 @@ class ToderoJvmRunner < Formula
   end
 
   test do
-    system "#{bin}/todero-runner", "--help"
+    system "#{bin}/todero-native-info", "--help"
   end
 end
