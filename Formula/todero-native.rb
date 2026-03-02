@@ -1,8 +1,8 @@
 class ToderoNative < Formula
   desc "Todero native protocol runtime library"
   homepage "https://github.com/biblip/todero"
-  url "https://brew.social100.com/todero/todero-native-0.1.76.tar.gz"
-  sha256 "b8594458c01f7d201a67a34f0d78669c053162bf140e0bc19c636f67318ca316"
+  url "https://brew.social100.com/todero/todero-native-0.1.79.tar.gz"
+  sha256 "a31cc19898c564182ac15070c94f59adb37723c4ff61fae498c211bcecbda903"
   license "Apache-2.0"
 
 
