@@ -1,16 +1,19 @@
 class ToderoNative < Formula
   desc "Todero Protocol V3 native runtime library"
   homepage "https://shellaia.com"
-  version "0.0.28"
-  url "https://brew.social100.com/todero-native/channels/stable/todero-native-darwin-aarch64-0.0.28.tar.gz"
-  sha256 "58497544679e54643d7eb049a712b30094258d2ddfacbbfec7eb5cabc394347a"
+  version "0.0.29"
+  url "https://brew.social100.com/todero-native/channels/stable/todero-native-darwin-aarch64-0.0.29.tar.gz"
+  sha256 "536c13b377ba67325b138a14cf5acb590ba49b06d1287c34723454b345b7f5ff"
 
   depends_on arch: :arm64
 
   def install
+    source_dir = buildpath/"darwin-aarch64"
+    odie "missing native payload directory: #{source_dir}" unless source_dir.directory?
+
     native_dir = libexec/"native/darwin-aarch64"
     native_dir.mkpath
-    cp_r Dir["darwin-aarch64/*"], native_dir
+    native_dir.install source_dir.children
     ln_sf "darwin-aarch64", libexec/"native/current"
 
     (bin/"tninfo").write <<~EOS
