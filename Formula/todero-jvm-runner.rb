@@ -1,8 +1,8 @@
 class ToderoJvmRunner < Formula
   desc "Todero component runner"
   homepage "https://github.com/biblip/todero"
-  url "https://brew.social100.com/todero/channels/stable/todero-jvm-runner-0.1.96.tar.gz"
-  sha256 "f1ba90f8b2a5f7e9740a8d7110d2bac1fc1b67ca48fa44d4bbfa021eeb722a0b"
+  url "https://brew.social100.com/todero/channels/stable/todero-jvm-runner-0.1.97.tar.gz"
+  sha256 "18e69af7840357455330ce76d609c1ddd57de7e0b515a45c6f8f8c3a44097626"
   license "Apache-2.0"
   depends_on "openjdk@17"
 
