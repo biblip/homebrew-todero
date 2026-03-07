@@ -1,9 +1,9 @@
 class ToderoNative < Formula
   desc "Todero Protocol V3 native runtime library"
   homepage "https://shellaia.com"
-  version "0.0.30"
-  url "https://brew.social100.com/todero-native/channels/stable/todero-native-darwin-aarch64-0.0.30.tar.gz"
-  sha256 "d3144fbbac0ca3c918da198763926abe0e9ee576f7fc6e982c7601e4caa92e87"
+  version "0.0.31"
+  url "https://brew.social100.com/todero-native/channels/stable/todero-native-darwin-aarch64-0.0.31.tar.gz"
+  sha256 "5879a195eb42607e77523438d26a4ea98616fdf816a1855b0bd3bc82ed15cc54"
 
   depends_on arch: :arm64
 
@@ -20,7 +20,7 @@ class ToderoNative < Formula
     (bin/"tninfo").write <<~EOS
       #!/usr/bin/env bash
       set -euo pipefail
-      if [[ "${1:-}" != "--libdir" ]]; then
+      if [[ -n "${1:-}" && "${1:-}" != "--libdir" ]]; then
         echo "usage: tninfo --libdir" >&2
         exit 2
       fi
