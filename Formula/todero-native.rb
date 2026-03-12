@@ -1,9 +1,9 @@
 class ToderoNative < Formula
   desc "Todero Protocol V3 native runtime library"
   homepage "https://shellaia.com"
-  version "0.0.50"
-  url "https://brew.social100.com/todero-native/channels/stable/todero-native-darwin-aarch64-0.0.50.tar.gz"
-  sha256 "51f6028d5596e673551911f454fc23e379be70b1061a3725e128bde027d8ed3e"
+  version "0.0.51"
+  url "https://brew.social100.com/todero-native/channels/stable/todero-native-darwin-aarch64-0.0.51.tar.gz"
+  sha256 "b7d39b3fb3d23e8d2ab11bea58850f5aa7b3a14d3dbe29799f14511f4ccc88f5"
 
   depends_on arch: :arm64
 
